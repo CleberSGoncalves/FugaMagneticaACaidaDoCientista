@@ -1,0 +1,26 @@
+{
+  "name": "fugamagneticaacaidadocientista",
+  "version": "1.0.0",
+  "description": "Fuga Magnética: A Queda do Cientista (Magnetic Escape: The Scientist's Fall) - CrazyGames HTML5 Physics Puzzle / Ragdoll",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "crazygames",
+    "html5",
+    "physics-puzzle",
+    "ragdoll",
+    "magnetism",
+    "maglev",
+    "sci-fi"
+  ],
+  "author": "FluidCleb Interactive",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

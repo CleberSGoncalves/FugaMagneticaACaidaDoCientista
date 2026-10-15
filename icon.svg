@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </radialGradient>
+    <linearGradient id="northPole" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+    <linearGradient id="southPole" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Fundo Circular com Borda de Alta Energia -->
+  <circle cx="64" cy="64" r="60" fill="url(#bgGrad)" stroke="#38bdf8" stroke-width="2.5" />
+  
+  <!-- Linhas de Campo Magnético em Arco -->
+  <path d="M 32 40 A 38 38 0 0 1 96 40" fill="none" stroke="rgba(0, 245, 255, 0.4)" stroke-width="1.5" stroke-dasharray="3,3" />
+  <path d="M 24 50 A 48 48 0 0 1 104 50" fill="none" stroke="rgba(239, 68, 68, 0.35)" stroke-width="1.5" stroke-dasharray="3,3" />
+
+  <!-- Ferradura Magnética / Polos Eletromagnéticos -->
+  <!-- Polo Norte (Esquerda / Vermelho) -->
+  <path d="M 28 68 L 28 42 C 28 26, 50 26, 50 42 L 50 56" fill="none" stroke="url(#northPole)" stroke-width="8" stroke-linecap="round" filter="url(#glow)" />
+  <rect x="23" y="66" width="10" height="8" rx="2" fill="#ef4444" />
+  <text x="28" y="73" font-family="'Montserrat', sans-serif" font-weight="900" font-size="7" fill="#ffffff" text-anchor="middle">N</text>
+
+  <!-- Polo Sul (Direita / Ciano) -->
+  <path d="M 100 68 L 100 42 C 100 26, 78 26, 78 42 L 78 56" fill="none" stroke="url(#southPole)" stroke-width="8" stroke-linecap="round" filter="url(#glow)" />
+  <rect x="95" y="66" width="10" height="8" rx="2" fill="#00f5ff" />
+  <text x="100" y="73" font-family="'Montserrat', sans-serif" font-weight="900" font-size="7" fill="#020617" text-anchor="middle">S</text>
+
+  <!-- Silhueta Ragdoll do Cientista Dr. Elara em Queda Livre Central -->
+  <g transform="translate(64, 76) rotate(14)" fill="#ffffff" filter="url(#glow)">
+    <!-- Cabeça e Óculos de Proteção -->
+    <circle cx="0" cy="-22" r="6" fill="#f8fafc" />
+    <rect x="-4" y="-23" width="8" height="3" rx="1.5" fill="#00f5ff" />
+    <!-- Jaleco / Tronco -->
+    <path d="M -4 -16 L 4 -16 L 6 -2 L -6 -2 Z" fill="#e2e8f0" />
+    <circle cx="0" cy="-9" r="2" fill="#ef4444" />
+    <!-- Braços Ragdoll Estendidos -->
+    <line x1="-4" y1="-14" x2="-14" y2="-8" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="4" y1="-14" x2="13" y2="-20" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" />
+    <!-- Pernas Maleáveis Flexionadas -->
+    <line x1="-3" y1="-2" x2="-8" y2="10" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="3" y1="-2" x2="7" y2="8" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="7" y1="8" x2="14" y2="6" stroke="#64748b" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>
